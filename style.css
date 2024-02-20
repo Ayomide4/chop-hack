@@ -13,10 +13,25 @@ body {
 }
 
 #game-container {
-  h1{
-    font-size: 2rem;
-    color: #71b3e2;
+  .title{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid red;
+    width: 40%;
+    .controller{
+      width: 25px;
+      height: 25px;
+    }
+    h1{
+      font-size: 1rem;
+      color: #58DFC3;
+    }
+    p{
+      color: grey;
+    }
   }
+  
   width: 50%;
   height: 50vh;
   background: #081e2d;
