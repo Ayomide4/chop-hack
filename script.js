@@ -13,24 +13,17 @@ const letters = [
   "L",
   "M",
   "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
+  "O"
 ];
+
+
 
 const text = document.querySelector(".text");
 
 letters.forEach((letter) => {
   const span = document.createElement("span");
+  span.classList.add('letter')
+  console.log(span.classList)
   span.textContent = letter;
   text.appendChild(span);
 });

@@ -18,7 +18,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     border: 1px solid red;
-    width: 40%;
+    width: 50%;
     .controller{
       width: 25px;
       height: 25px;
@@ -38,5 +38,12 @@ body {
 }
 
 span {
+  border: 1px red;
   color: #71b3e2;
+}
+
+.letter{
+  border: 1px solid #71b3e2;
+  border-radius: 5px;
+  padding: 10px;
 }
