@@ -18,7 +18,7 @@ const letters = [
 
 
 
-const text = document.querySelector(".text");
+const text = document.querySelector(".text-container");
 
 letters.forEach((letter) => {
   const span = document.createElement("span");
