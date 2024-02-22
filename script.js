@@ -1,3 +1,8 @@
+//TODO:
+// make sure website is desktop only 
+// make success and failure toasts 
+// make progess/timer bar at the bottom
+// add react to project to manage state
 const letters = [
   "A",
   "B",
@@ -16,14 +21,33 @@ const letters = [
   "O"
 ];
 
+function generateRandomLettersArray(length) {
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const randomLettersArray = [];
+
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * letters.length);
+    const randomLetter = letters.charAt(randomIndex);
+    randomLettersArray.push(randomLetter);
+  }
+
+  return randomLettersArray;
+}
+
+const randomLetters = generateRandomLettersArray(15);
 
 
 const text = document.querySelector(".text-container");
+const textbox = document.querySelector('.text-box');
 
-letters.forEach((letter) => {
+randomLetters.forEach((letter) => {
   const span = document.createElement("span");
   span.classList.add('letter')
-  console.log(span.classList)
   span.textContent = letter;
   text.appendChild(span);
 });
+
+textbox.addEventListener("change", () => {
+  console.log('input')
+})
+
