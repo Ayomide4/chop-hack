@@ -21,8 +21,9 @@ body {
   .title{
     display: flex;
     align-items: center;
-    width: 100%;
-    margin-bottom: 1rem;
+    width: 95%;
+    margin: 0.5rem 0rem 0.5rem 0rem; 
+
 
     .controller{
       width: 25px;
@@ -41,7 +42,7 @@ body {
   }
   
   width: 50%;
-  height: 50vh;
+  height: 60vh;
   border-radius: 5px;
   background: #04131f;
 }
@@ -53,8 +54,8 @@ body {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  width: 98%;
-  height: 100%;
+  width: 97%;
+  height: 85%;
   gap: 0.25rem;
 }
 
@@ -70,7 +71,7 @@ span {
   background: #052033;
   padding: 1rem;
   font-size: 1.25rem;
-  min-width: 2rem;
-  min-height: 2rem;
+  min-width: 4rem;
+  min-height:4rem;
   border: 1px solid #71b3e2; border-radius: 5px;
 }
