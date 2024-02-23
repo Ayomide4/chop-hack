@@ -13,6 +13,7 @@ body {
 }
 
 #game-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,33 +22,31 @@ body {
   border-radius: 5px;
   background: #04131f;
 
-  .title{
+  .title {
     display: flex;
     align-items: center;
     width: 95%;
-    margin: 0.5rem 0rem 0.5rem 0rem; 
+    margin: 0.5rem 0rem 0.5rem 0rem;
 
-
-    .controller{
+    .controller {
       width: 25px;
       height: 25px;
       margin-right: 0.5rem;
     }
-    h1{
+    h1 {
       font-size: 1rem;
-      color: #26ECC4;
+      color: #26ecc4;
       margin-right: 0.5rem;
     }
-    p{
+    p {
       font-size: 0.7rem;
       color: lightgray;
     }
   }
-  
 }
 
-.text-container{
-  background: #031A2B;
+.text-container {
+  background: #031a2b;
 
   align-content: flex-start;
   justify-content: center;
@@ -62,34 +61,33 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #4E8CB7;
-
+  color: #4e8cb7;
 }
 
-.letter{
+.letter {
   background: #052033;
   padding: 1rem;
+  border: 1px solid transparent;
   font-size: 1.25rem;
   min-width: 4rem;
-  min-height:4rem;
+  min-height: 4rem;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.correct{
-  color: #26ECC4;
+.correct {
+  color: #26ecc4;
   background: #114443;
-  border: 1px solid #26ECC4;
+  border: 1px solid #26ecc4;
 }
 
-.incorrect{
+.incorrect {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: #fff;
   background: #995355;
 }
 
-
-.text-box{
+.text-box {
   border: none;
   background-color: transparent;
   color: transparent;
@@ -100,5 +98,14 @@ span {
   -o-user-select: none;
   outline: none;
   pointer-events: none;
-  text-decoration: none;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #e14e1d;
+  width: calc(var(--width) * 1%);
+  height: 1rem;
+  border-radius: 5px;
 }
