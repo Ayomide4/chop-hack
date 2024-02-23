@@ -1,8 +1,5 @@
 //TODO:
-// make sure website is desktop only
-// make success and failure toasts
-// make progess/timer bar at the bottom
-// add react to project to manage state
+//FIXME: fix css for media queries
 const letters = [
   "A",
   "B",
@@ -38,8 +35,8 @@ let timer = setInterval(() => {
   const width = parseFloat(computedStyle.getPropertyValue("--width")) || 100;
 
   if (width <= 0.5) {
-    alert("You lost");
-    window.location.reload();
+    // alert("You lost");
+    // window.location.reload();
   } else if (!fail) {
     progressBar.style.setProperty("--width", width - 0.25);
   }
@@ -61,6 +58,7 @@ function generateRandomLettersArray(length) {
 randomLetters.forEach((letter) => {
   const span = document.createElement("span");
   span.classList.add("letter");
+  span.classList.add(".noselect");
   span.textContent = letter;
   text.appendChild(span);
 });
@@ -85,15 +83,15 @@ textbox.addEventListener("input", () => {
       text.childNodes[current].classList.remove("incorrect");
       console.log(textbox.value);
       if (randomLetters.join("") === textbox.value.toUpperCase()) {
-        alert("You won");
-        window.location.reload();
+        // alert("You won");
+        // window.location.reload();
       }
     } else {
       text.childNodes[current].classList.add("incorrect");
       text.childNodes[current].classList.remove("correct");
       fail = true;
       setTimeout(() => {
-        alert("You lost");
+        // alert("You lost");
       }, 0);
     }
   }

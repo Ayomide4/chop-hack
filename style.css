@@ -109,3 +109,64 @@ span {
   height: 1rem;
   border-radius: 5px;
 }
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media (min-width: 992px) {
+  #game-container {
+    width: 80%;
+  }
+  .letter {
+    min-width: 5rem;
+    min-height: 5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #game-container {
+    width: 80%;
+    height: 70vh;
+  }
+  .text-container {
+    gap: 0.5rem;
+  }
+  .letter {
+    min-width: 7rem;
+    min-height: 7rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .title {
+    .controller {
+      width: 35px !important;
+      height: 35px !important;
+      margin-bottom: 0.25rem !important;
+    }
+    h1 {
+      font-size: 1.25rem !important;
+    }
+    p {
+      font-size: 1rem !important;
+    }
+  }
+  #game-container {
+    width: 60%;
+    height: 70vh;
+  }
+  .text-container {
+    gap: 0.5rem;
+  }
+  .letter {
+    min-width: 6rem;
+    min-height: 6rem;
+  }
+}
