@@ -1,22 +1,5 @@
 //TODO:
 //FIXME: fix css for media queries
-const letters = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-];
 
 const progressBar = document.querySelector(".progress-bar");
 const randomLetters = generateRandomLettersArray(15);
@@ -43,7 +26,7 @@ let timer = setInterval(() => {
 }, 15.625);
 
 function generateRandomLettersArray(length) {
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const letters = "QWERASD";
   const randomLettersArray = [];
 
   for (let i = 0; i < length; i++) {
@@ -71,7 +54,6 @@ textbox.addEventListener("blur", () => {
 
 //get lenght of input and check last index to current index of childnodes
 //TODO: change text.childNOdes to randomLetters
-console.log(textbox.value);
 textbox.addEventListener("input", () => {
   let current = textbox.value.length - 1;
   if (current > -1) {
@@ -81,7 +63,6 @@ textbox.addEventListener("input", () => {
     ) {
       text.childNodes[current].classList.add("correct");
       text.childNodes[current].classList.remove("incorrect");
-      console.log(textbox.value);
       if (randomLetters.join("") === textbox.value.toUpperCase()) {
         // alert("You won");
         // window.location.reload();
@@ -95,5 +76,4 @@ textbox.addEventListener("input", () => {
       }, 0);
     }
   }
-  // console.log(text.childNodes[0].innerText);
 });
